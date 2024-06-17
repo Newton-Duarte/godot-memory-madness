@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://smqtiqfc2b8x"]
+
+[ext_resource type="LabelSettings" uid="uid://cpitu6v5u5bn2" path="res://assets/gm_84_yellow.tres" id="1_ms47c"]
+[ext_resource type="Script" path="res://scripts/main_screen.gd" id="1_y57ni"]
+[ext_resource type="PackedScene" uid="uid://brjyelqd4dyro" path="res://scenes/front_sprite.tscn" id="2_yg60p"]
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y57ni")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0980392, 0.164706, 0.337255, 0.196078)
+
+[node name="VB" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spacer" type="Control" parent="VB"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VB"]
+layout_mode = 2
+text = "Memory Madness"
+label_settings = ExtResource("1_ms47c")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Spacer2" type="Control" parent="VB"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBLevels" type="HBoxContainer" parent="VB"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 8
+
+[node name="Spacer3" type="Control" parent="VB"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBSprites" type="HBoxContainer" parent="VB"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 72
+
+[node name="FrontSprite" parent="VB/HBSprites" instance=ExtResource("2_yg60p")]
+layout_mode = 2
+
+[node name="FrontSprite2" parent="VB/HBSprites" instance=ExtResource("2_yg60p")]
+layout_mode = 2
+
+[node name="FrontSprite3" parent="VB/HBSprites" instance=ExtResource("2_yg60p")]
+layout_mode = 2
+
+[node name="FrontSprite4" parent="VB/HBSprites" instance=ExtResource("2_yg60p")]
+layout_mode = 2
+
+[node name="Spacer4" type="Control" parent="VB"]
+layout_mode = 2
+size_flags_vertical = 3
